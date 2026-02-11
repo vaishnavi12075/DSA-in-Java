@@ -2,13 +2,15 @@ import java.util.*;
 public class Calculator{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter 1st number");
-        int a=sc.nextInt();
-        System.out.println("enter 2nd number");
-        int b=sc.nextInt();
-        System.out.println("Enter a operator");
-        char ch=sc.next().charAt(0);
-        switch(ch){
+        boolean by=true;
+        while(by){
+            System.out.println("enter 1st number");
+            int a=sc.nextInt();
+            System.out.println("enter 2nd number");
+            int b=sc.nextInt();
+            System.out.println("Enter a operator");
+            char ch=sc.next().charAt(0);
+            switch(ch){
             case '+':
                 System.out.println("The result is:" + (a+b));
                 break;
@@ -25,13 +27,16 @@ public class Calculator{
                                 System.out.println("the result is:"+ (a%b));
                                 break;
                                 default:
-                                    System.out.println("inavalid operator");
 
+                                    System.out.println("invalid operator");
+        }
+        System.out.println("Do you want to continue");
+        char choice=sc.next().charAt(0);
+        if(choice=='n'||choice=='N'){
+            by=false;
 
         }
-
-
-
-
+    }
+        sc.close();
     }
 }
