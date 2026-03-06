@@ -18,10 +18,6 @@ public class hasharray {
         int nums[]={1,1,2,3,3,2,3,2,3,3,3};
         int k=hashtable(nums,3);
         System.out.println("frequency of 3 is: "+k);
-
-
-
-
     }
     
 }
